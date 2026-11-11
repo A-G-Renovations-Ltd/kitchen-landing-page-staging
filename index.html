@@ -2,6 +2,24 @@
 <html lang="en-GB">
 
 <head>
+  <!-- COOKIE CONSENT: Google Consent Mode v2 defaults. Must stay above Google Tag Manager and the Google tag.
+       Nothing that sets tracking cookies runs until the visitor accepts; a saved choice is reused for 12 months. -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    (function () {
+      var saved = null;
+      try { saved = JSON.parse(localStorage.getItem('ag_cookie_consent') || 'null'); } catch (e) { saved = null; }
+      if (saved && (saved.v !== 1 || !saved.ts || Date.now() - saved.ts > 365 * 24 * 3600 * 1000)) saved = null;
+      window.agConsent = saved;
+      var g = function (on) { return on ? 'granted' : 'denied'; };
+      gtag('consent', 'default', {
+        ad_storage: g(saved && saved.ads), ad_user_data: g(saved && saved.ads), ad_personalization: g(saved && saved.ads),
+        analytics_storage: g(saved && saved.analytics), functionality_storage: 'granted', security_storage: 'granted',
+        wait_for_update: 500
+      });
+    })();
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
@@ -10,11 +28,24 @@
   <meta name="description"
     content="Complete kitchen renovations for homes across Greater London, from strip-out to final finish. In-house fitters, every specialist trade coordinated, 12-month labour guarantee. Book a free site visit.">
   <link rel="canonical" href="https://kitchen.ag-renovations.co.uk/">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:site_name" content="A&amp;G Renovations">
+  <meta property="og:url" content="https://kitchen.ag-renovations.co.uk/">
+  <meta property="og:title" content="Kitchen Renovation London | A&amp;G Renovations (Est. 2014)">
+  <meta property="og:description" content="Complete kitchen renovations for homes across Greater London, from strip-out to final finish. In-house fitters, every specialist trade coordinated, 12-month labour guarantee. Book a free site visit.">
+  <meta property="og:image" content="https://kitchen.ag-renovations.co.uk/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="A completed A&amp;G kitchen with dark shaker-style units and brass handles">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#24483a">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/kitchen.css?v=18">
+  <link rel="stylesheet" href="css/kitchen.css?v=19">
 
 
 
@@ -116,7 +147,7 @@
       "name": "Do you charge a fee for quoting, or use a matching service?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. The site visit and the written proposal are free, and there is no obligation to proceed. If you contact us directly there is also no agency or matching-platform commission in your quote. Those platforms are free for you to use because they charge the builder a percentage of every job won, and that cost has to be recovered somewhere. Our direct quotes are typically 10-15% lower than the same project priced through a matching service, because the commission is not there to pass on."
+        "text": "No. The site visit and the written proposal are free, and there is no obligation to proceed. If you contact us directly there is also no agency or matching-platform commission in your quote. Those platforms are free for you to use because they charge the builder a percentage of every job won, and that cost has to be recovered somewhere. Our direct quotes are typically 10–15% lower than the same project priced through a matching service, because the commission is not there to pass on."
       }
     },
     {
@@ -952,7 +983,8 @@
   <footer class="footer">
     <div class="wrap">
       <span>A&amp;G Renovations Ltd. Established in London in 2014. Member of the British Institute of Fitted Interiors Specialists.</span>
-      <span>Greater London, inside the M25. <a href="mailto:sales@ag-renovations.co.uk">sales@ag-renovations.co.uk</a>. <a href="https://ag-renovations.co.uk/privacy-policy/" target="_blank" rel="noopener">Privacy policy</a></span>
+      <span>Greater London, inside the M25. <a href="mailto:sales@ag-renovations.co.uk">sales@ag-renovations.co.uk</a>. <a href="https://ag-renovations.co.uk/privacy-policy/" target="_blank" rel="noopener">Privacy policy</a>.
+        <button type="button" class="link-btn" data-cc-open>Cookie settings</button></span>
     </div>
   </footer>
 
@@ -1474,6 +1506,69 @@
         gtag('event', 'conversion', { 'send_to': 'AW-17907613995/FLEYCIDJhOEcEKuCgttC' });
       }
     });
+  </script>
+
+  <!-- COOKIE CONSENT banner. "Accept" grants everything; "Choose your cookie options" opens switches that start off. -->
+  <div class="cc" id="cc" role="region" aria-label="Cookie choices" hidden>
+    <div class="cc-card">
+      <div class="cc-main" id="cc-main">
+        <p class="cc-title">Cookies on this page</p>
+        <p class="cc-text">We use cookies to see how people use this page and to measure our adverts, so we can keep
+          improving it. <a href="https://ag-renovations.co.uk/privacy-policy/" target="_blank" rel="noopener">Privacy policy</a></p>
+        <div class="cc-actions">
+          <button type="button" class="btn btn-primary cc-accept" data-cc="accept">Accept</button>
+          <button type="button" class="cc-link" data-cc="options" aria-controls="cc-options" aria-expanded="false">Choose your cookie options</button>
+        </div>
+      </div>
+      <div class="cc-options" id="cc-options" hidden>
+        <p class="cc-title">Your cookie options</p>
+        <div class="cc-row"><span class="cc-label"><b>Essential</b><span class="cc-desc">Needed for the page and the enquiry form to work.</span></span><span class="cc-always">Always on</span></div>
+        <label class="cc-row" for="cc-analytics"><span class="cc-label"><b>Analytics</b><span class="cc-desc">Google Analytics and Microsoft Clarity show us which parts of the page help and where people get stuck.</span></span><input type="checkbox" class="cc-switch" id="cc-analytics"></label>
+        <label class="cc-row" for="cc-ads"><span class="cc-label"><b>Advertising</b><span class="cc-desc">Google Ads tells us which of our adverts lead to enquiries.</span></span><input type="checkbox" class="cc-switch" id="cc-ads"></label>
+        <div class="cc-actions">
+          <button type="button" class="btn btn-primary cc-accept" data-cc="accept">Accept all</button>
+          <button type="button" class="cc-save" data-cc="save">Save my choices</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const KEY = 'ag_cookie_consent';
+      const box = document.getElementById('cc');
+      if (!box) return;
+      const main = document.getElementById('cc-main'), opts = document.getElementById('cc-options');
+      const cA = document.getElementById('cc-analytics'), cD = document.getElementById('cc-ads');
+      const optBtn = box.querySelector('[data-cc="options"]');
+      const g = (on) => (on ? 'granted' : 'denied');
+      function apply(c) {
+        window.agConsent = c;
+        if (typeof gtag === 'function') {
+          gtag('consent', 'update', { ad_storage: g(c.ads), ad_user_data: g(c.ads), ad_personalization: g(c.ads), analytics_storage: g(c.analytics) });
+        }
+        if (c.analytics && typeof window.agLoadClarity === 'function') window.agLoadClarity();
+      }
+      function close() { box.hidden = true; document.body.classList.remove('cc-open'); }
+      function show(options) {
+        main.hidden = options; opts.hidden = !options; optBtn.setAttribute('aria-expanded', String(options));
+        if (options) { const c = window.agConsent || {}; cA.checked = !!c.analytics; cD.checked = !!c.ads; cA.focus(); }
+      }
+      function open(options) { box.hidden = false; document.body.classList.add('cc-open'); show(!!options); }
+      function save(c) {
+        c.v = 1; c.ts = Date.now();
+        try { localStorage.setItem(KEY, JSON.stringify(c)); } catch (e) { /* private mode: applies for this visit only */ }
+        apply(c); close();
+      }
+      box.addEventListener('click', (e) => {
+        const b = e.target.closest('[data-cc]');
+        if (!b) return;
+        if (b.dataset.cc === 'accept') save({ analytics: true, ads: true });
+        else if (b.dataset.cc === 'options') show(true);
+        else if (b.dataset.cc === 'save') save({ analytics: cA.checked, ads: cD.checked });
+      });
+      document.querySelectorAll('[data-cc-open]').forEach((b) => b.addEventListener('click', () => open(true)));
+      if (!window.agConsent) setTimeout(() => open(false), 700);
+    })();
   </script>
 </body>
 
