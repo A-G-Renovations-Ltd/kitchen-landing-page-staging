@@ -648,6 +648,9 @@ ul, ol { padding: 0; list-style: none; }
 .cred-direct strong { color: var(--white); }
 .creds-also { margin-top: 12px; font-size: 14.5px; color: var(--muted); }
 .closing .closing-note { margin-top: 12px; font-size: 16px; color: rgba(255, 255, 255, 0.6); }
+@media (max-width: 560px) {
+  .cred-mark .word { font-size: 18px; letter-spacing: 0; }
+}
 
 @media (max-width: 1000px) {
   .account-grid { grid-template-columns: 1fr; }
