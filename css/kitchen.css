@@ -652,6 +652,19 @@ ul, ol { padding: 0; list-style: none; }
   .cred-mark .word { font-size: 18px; letter-spacing: 0; }
 }
 
+/* Headline accent: the key phrase in brand green with a soft highlighter bar (not an underline, so it never
+   reads as a link). On dark sections the phrase turns mint with a brass bar. */
+.accent {
+  font-style: normal; color: var(--forest);
+  background-image: linear-gradient(rgba(149, 213, 178, 0.55), rgba(149, 213, 178, 0.55));
+  background-repeat: no-repeat; background-position: 0 88%; background-size: 100% 0.22em;
+  -webkit-box-decoration-break: clone; box-decoration-break: clone; padding: 0 0.04em;
+}
+.on-dark .accent, .closing .accent {
+  color: var(--mint);
+  background-image: linear-gradient(rgba(220, 184, 120, 0.45), rgba(220, 184, 120, 0.45));
+}
+
 @media (max-width: 1000px) {
   .account-grid { grid-template-columns: 1fr; }
   .creds { grid-template-columns: repeat(2, minmax(0, 1fr)); }
